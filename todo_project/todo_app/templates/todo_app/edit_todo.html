@@ -1,0 +1,22 @@
+{% extends "todo_app/layout.html" %}
+{%block title%}
+<title>Edit ToDo</title>
+{%endblock%}
+{% block content %}
+<div class="container">
+    <div class="py-5"></div>
+    <h1 class="text-center">Edit ToDo</h1>
+    <div class="py-5"></div>
+    <form onsubmit="handleEditForm(event,{{todo.id}})">
+        <div class="form-group">
+            <label for="toDoTitle">ToDo Title</label>
+            <input type="title" name="title" class="form-control" id="toDoTitle" value="{{todo.title}}">
+        </div>
+        <div class="form-group">
+            <label for="toDoDescription">ToDo Description</label>
+            <input type="description" name="description" class="form-control" id="toDoDescription" value="{{todo.description}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Changes</button>
+    </form>
+</div>
+{%endblock%}

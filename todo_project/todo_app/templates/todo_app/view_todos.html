@@ -1,0 +1,19 @@
+{% extends "todo_app/layout.html" %}
+{%block title%}
+<title>View ToDos</title>
+{%endblock%}
+{% block content %}
+<div class="py-2"></div>
+    <h2 class="ml-2">ToDos for: {{name}}</h2>
+    <ul>
+        {% for todo in todo_dict %}
+        <li><a href="todos/{{todo.id}}">{{todo.title}}</a></li>
+        {%endfor%}
+    </ul>
+    <div class="col mb-1">
+        <a class = "ml-2" href="/todos/new">Add ToDo</a>
+    </div>
+    <div class="col">
+        <a class = "ml-2" href="/logout">Log Out</a>
+    </div>
+{%endblock%}

@@ -1,0 +1,24 @@
+{% extends "todo_app/layout.html" %}
+{%block title%}
+<title>Log In</title>
+{%endblock%}
+{% block content %}
+<div class="container">
+    <div class="py-5"></div>
+    <h1 class="text-center">Log In Here</h1>
+    <div class="py-5"></div>
+    <form onsubmit="handleLogInForm(event)">
+        <div class="form-group">
+            <label for="EmailInput">Email address</label>
+            <input type="email" name="email" class="form-control" id="EmailInput" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="PassInput">Password</label>
+            <input type="password" name="password" class="form-control" id="PassInput" placeholder="Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+{%endblock%}

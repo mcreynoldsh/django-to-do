@@ -1,0 +1,16 @@
+{% extends "todo_app/layout.html" %}
+{%block title%}
+<title>ToDo Detail</title>
+{%endblock%}
+{% block content %}
+<div class="py-2"></div>
+<h4 class="ml-2">Title: {{todo.title}}</h4>
+<strong class="ml-2">Description: {{todo.description}}</strong>
+<div class="py-2"></div>
+<div class="col">
+    <a class="ml-2" href="{{todo.id}}/edit">Edit</a>
+</div>
+<div class="col mt-1">
+    <a class="ml-2" href="{{todo.id}}/delete">Delete ToDo</a>
+</div>
+{%endblock%}
